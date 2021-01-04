@@ -31,7 +31,7 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        upButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
         currVertRate = new javax.swing.JLabel();
         downButton = new javax.swing.JButton();
         leftButton = new javax.swing.JButton();
@@ -43,17 +43,22 @@ public class NewJFrame extends javax.swing.JFrame {
         horiLabel = new javax.swing.JLabel();
         currXPos = new javax.swing.JLabel();
         currHoriRate = new javax.swing.JLabel();
+        upLeftButton = new javax.swing.JButton();
+        upButton = new javax.swing.JButton();
+        upRightButton = new javax.swing.JButton();
+        downLeftButton = new javax.swing.JButton();
+        downRightButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Telescope Positioning");
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(java.awt.Color.darkGray);
 
-        upButton.setText("↑");
-        upButton.setPreferredSize(new java.awt.Dimension(45, 45));
-        upButton.addActionListener(new java.awt.event.ActionListener() {
+        cancelButton.setText("Ø");
+        cancelButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                upButtonActionPerformed(evt);
+                cancelButtonActionPerformed(evt);
             }
         });
 
@@ -97,6 +102,46 @@ public class NewJFrame extends javax.swing.JFrame {
 
         currHoriRate.setText("0");
 
+        upLeftButton.setText("↖");
+        upLeftButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        upLeftButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upLeftButtonActionPerformed(evt);
+            }
+        });
+
+        upButton.setText("↑");
+        upButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        upButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upButtonActionPerformed(evt);
+            }
+        });
+
+        upRightButton.setText("↗");
+        upRightButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        upRightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upRightButtonActionPerformed(evt);
+            }
+        });
+
+        downLeftButton.setText("↙");
+        downLeftButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        downLeftButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downLeftButtonActionPerformed(evt);
+            }
+        });
+
+        downRightButton.setText("↘");
+        downRightButton.setPreferredSize(new java.awt.Dimension(45, 45));
+        downRightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downRightButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,13 +157,23 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(upLeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(downLeftButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(downRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(upRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(vertLabel)
@@ -153,14 +208,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(xLabel)
                     .addComponent(currXPos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(upLeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(upRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(downLeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(downRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -170,35 +232,41 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
-        // Up button code to increase vertical rate to max (10)
-        if (!swingTimer.isRunning()) {
-            swingTimer.start();
-        }
-        int currRate = Integer.parseInt(currVertRate.getText());
-        currRate += 1;
-        currVertRate.setText(String.valueOf(currRate));
-        if (currRate == 10) {
-            upButton.setEnabled(false);
-        }
-        if (currRate > -10) {
-            downButton.setEnabled(true);
-        }
-    }//GEN-LAST:event_upButtonActionPerformed
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        currVertRate.setText("0");
+        currHoriRate.setText("0");
+        downButton.setEnabled(true);
+        upButton.setEnabled(true);
+        rightButton.setEnabled(true);
+        leftButton.setEnabled(true);
+        upLeftButton.setEnabled(true);
+        upRightButton.setEnabled(true);
+        downLeftButton.setEnabled(true);
+        downRightButton.setEnabled(true);
+    }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void downButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downButtonActionPerformed
         // Down button code to decrease vertical rate to max (-10)
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
-        int currRate = Integer.parseInt(currVertRate.getText());
-        currRate -= 1;
-        currVertRate.setText(String.valueOf(currRate));
-        if (currRate == -10) {
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        currVRate -= 1;
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == -10) {
             downButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
+            downRightButton.setEnabled(false);
         }
-        if (currRate < 10) {
+        if (currVRate < 10) {
             upButton.setEnabled(true);
+            if (currHRate < 10) {
+                upRightButton.setEnabled(true);
+            }
+            if (currHRate > -10) {
+                upLeftButton.setEnabled(true);
+            }
         }
     }//GEN-LAST:event_downButtonActionPerformed
 
@@ -207,14 +275,23 @@ public class NewJFrame extends javax.swing.JFrame {
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
-        int currRate = Integer.parseInt(currHoriRate.getText());
-        currRate -= 1;
-        currHoriRate.setText(String.valueOf(currRate));
-        if (currRate == -10) {
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        currHRate -= 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        if (currHRate == -10) {
             leftButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
         }
-        if (currRate < 10) {
+        if (currHRate < 10) {
             rightButton.setEnabled(true);
+            if (currVRate < 10) {
+                upRightButton.setEnabled(true);
+            }
+            if (currVRate > -10) {
+                downRightButton.setEnabled(true);
+            }
         }
     }//GEN-LAST:event_leftButtonActionPerformed
 
@@ -223,16 +300,198 @@ public class NewJFrame extends javax.swing.JFrame {
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
-        int currRate = Integer.parseInt(currHoriRate.getText());
-        currRate += 1;
-        currHoriRate.setText(String.valueOf(currRate));
-        if (currRate == 10) {
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        currHRate += 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        if (currHRate == 10) {
             rightButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+            downRightButton.setEnabled(false);
         }
-        if (currRate > -10) {
+        if (currHRate > -10) {
             leftButton.setEnabled(true);
+            if (currVRate < 10) {
+                upLeftButton.setEnabled(true);
+            }
+            if (currVRate > -10) {
+                downLeftButton.setEnabled(true);
+            }
         }
     }//GEN-LAST:event_rightButtonActionPerformed
+
+    private void upLeftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upLeftButtonActionPerformed
+        // UP and LEFT button, disables if UP OR LEFT is maxed out
+        if (!swingTimer.isRunning()) {
+            swingTimer.start();
+        }
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        currVRate += 1;
+        currHRate -= 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == 10) {
+            upButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+        }
+        else {
+            downButton.setEnabled(true);
+            downRightButton.setEnabled(true);
+            if (currHRate > -10) {
+                downLeftButton.setEnabled(true);
+            }
+        }
+        if (currHRate == -10) {
+            leftButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
+        }
+        else {
+            rightButton.setEnabled(true);
+            downRightButton.setEnabled(true);
+            if (currVRate < 10) {
+                upRightButton.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_upLeftButtonActionPerformed
+
+    private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
+        // Up button code to increase vertical rate to max (10)
+        if (!swingTimer.isRunning()) {
+            swingTimer.start();
+        }
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        currVRate += 1;
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == 10) {
+            upButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+        }
+        if (currVRate > -10) {
+            downButton.setEnabled(true);
+            if (currHRate < 10) {
+                downRightButton.setEnabled(true);
+            }
+            if (currHRate > -10) {
+                downLeftButton.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_upButtonActionPerformed
+
+    private void upRightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upRightButtonActionPerformed
+        // Up and Right button, disables is UP OR RIGHT is maxed
+        if (!swingTimer.isRunning()) {
+            swingTimer.start();
+        }
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        currVRate += 1;
+        currHRate += 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == 10) {
+            upButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+        }
+        else {
+            downButton.setEnabled(true);
+            downLeftButton.setEnabled(true);
+            if (currHRate < 10) {
+                downRightButton.setEnabled(true);
+            }
+        }
+        if (currHRate == 10) {
+            rightButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+            downRightButton.setEnabled(false);
+        }
+        else {
+            leftButton.setEnabled(true);
+            downLeftButton.setEnabled(true);
+            if (currVRate < 10) {
+                upLeftButton.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_upRightButtonActionPerformed
+
+    private void downLeftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downLeftButtonActionPerformed
+        // DOWN and LEFT button, disables if DOWN OR LEFT is maxed out
+        if (!swingTimer.isRunning()) {
+            swingTimer.start();
+        }
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        currVRate -= 1;
+        currHRate -= 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == -10) {
+            downButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
+            downRightButton.setEnabled(false);
+        }
+        else {
+            upButton.setEnabled(true);
+            upRightButton.setEnabled(true);
+            if (currHRate > -10) {
+                downRightButton.setEnabled(true);
+            }
+        }
+        if (currHRate == -10) {
+            leftButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
+            upLeftButton.setEnabled(false);
+        }
+        else {
+            rightButton.setEnabled(true);
+            upRightButton.setEnabled(true);
+            if (currVRate > -10) {
+                upLeftButton.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_downLeftButtonActionPerformed
+
+    private void downRightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downRightButtonActionPerformed
+        // DOWN and RIGHT button, disables if DOWN OR RIGHT is maxed out
+        if (!swingTimer.isRunning()) {
+            swingTimer.start();
+        }
+        int currHRate = Integer.parseInt(currHoriRate.getText());
+        int currVRate = Integer.parseInt(currVertRate.getText());
+        currVRate -= 1;
+        currHRate += 1;
+        currHoriRate.setText(String.valueOf(currHRate));
+        currVertRate.setText(String.valueOf(currVRate));
+        if (currVRate == -10) {
+            downButton.setEnabled(false);
+            downLeftButton.setEnabled(false);
+            downRightButton.setEnabled(false);
+        }
+        else {
+            upButton.setEnabled(true);
+            upLeftButton.setEnabled(true);
+            if (currHRate < 10) {
+                downLeftButton.setEnabled(true);
+            }
+        }
+        if (currHRate == 10) {
+            rightButton.setEnabled(false);
+            upRightButton.setEnabled(false);
+            downRightButton.setEnabled(false);
+        }
+        else {
+            leftButton.setEnabled(true);
+            upLeftButton.setEnabled(true);
+            if (currVRate > -10) {
+                upRightButton.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_downRightButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,15 +533,20 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelButton;
     private javax.swing.JLabel currHoriRate;
     private javax.swing.JLabel currVertRate;
     private javax.swing.JLabel currXPos;
     private javax.swing.JLabel currYPos;
     private javax.swing.JButton downButton;
+    private javax.swing.JButton downLeftButton;
+    private javax.swing.JButton downRightButton;
     private javax.swing.JLabel horiLabel;
     private javax.swing.JButton leftButton;
     private javax.swing.JButton rightButton;
     private javax.swing.JButton upButton;
+    private javax.swing.JButton upLeftButton;
+    private javax.swing.JButton upRightButton;
     private javax.swing.JLabel vertLabel;
     private javax.swing.JLabel xLabel;
     private javax.swing.JLabel yLabel;
