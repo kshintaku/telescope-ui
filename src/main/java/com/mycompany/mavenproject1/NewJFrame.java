@@ -32,61 +32,58 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         upButton = new javax.swing.JButton();
-        currYPos = new javax.swing.JLabel();
         currVertRate = new javax.swing.JLabel();
         downButton = new javax.swing.JButton();
         leftButton = new javax.swing.JButton();
         rightButton = new javax.swing.JButton();
+        currYPos = new javax.swing.JLabel();
         vertLabel = new javax.swing.JLabel();
         yLabel = new javax.swing.JLabel();
         xLabel = new javax.swing.JLabel();
         horiLabel = new javax.swing.JLabel();
-        currHoriRate = new javax.swing.JLabel();
         currXPos = new javax.swing.JLabel();
+        currHoriRate = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Telescope Positioning");
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(java.awt.Color.darkGray);
 
-        upButton.setBackground(new java.awt.Color(204, 204, 204));
-        upButton.setText("Up");
-        upButton.setPreferredSize(new java.awt.Dimension(100, 30));
+        upButton.setText("↑");
+        upButton.setPreferredSize(new java.awt.Dimension(45, 45));
         upButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upButtonActionPerformed(evt);
             }
         });
 
-        currYPos.setText("0");
-
         currVertRate.setText("0");
 
-        downButton.setBackground(new java.awt.Color(204, 204, 204));
-        downButton.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
-        downButton.setText("Down");
-        downButton.setPreferredSize(new java.awt.Dimension(100, 30));
+        downButton.setText("↓");
+        downButton.setPreferredSize(new java.awt.Dimension(45, 45));
         downButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downButtonActionPerformed(evt);
             }
         });
 
-        leftButton.setText("Left");
-        leftButton.setPreferredSize(new java.awt.Dimension(100, 30));
+        leftButton.setText("←");
+        leftButton.setPreferredSize(new java.awt.Dimension(45, 45));
         leftButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 leftButtonActionPerformed(evt);
             }
         });
 
-        rightButton.setText("Right");
-        rightButton.setPreferredSize(new java.awt.Dimension(100, 30));
+        rightButton.setText("→");
+        rightButton.setPreferredSize(new java.awt.Dimension(45, 45));
         rightButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rightButtonActionPerformed(evt);
             }
         });
+
+        currYPos.setText("0");
 
         vertLabel.setText("Current Vertical Rate:");
 
@@ -96,9 +93,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         horiLabel.setText("Current Horizontal Rate:");
 
-        currHoriRate.setText("0");
-
         currXPos.setText("0");
+
+        currHoriRate.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,66 +104,74 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(vertLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(currVertRate))
-                        .addComponent(horiLabel, javax.swing.GroupLayout.Alignment.LEADING))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(currHoriRate)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(62, 62, 62)
+                        .addComponent(horiLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addComponent(currHoriRate))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(xLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(currXPos))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(yLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(currYPos)))))
-                .addContainerGap(41, Short.MAX_VALUE))
+                                .addGap(51, 51, 51)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(vertLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(currVertRate))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(xLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(currXPos))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(yLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(currYPos)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vertLabel)
                     .addComponent(currVertRate))
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(currYPos)
-                    .addComponent(yLabel)
-                    .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(horiLabel)
                     .addComponent(currHoriRate))
-                .addGap(52, 52, 52)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(yLabel)
+                    .addComponent(currYPos))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(xLabel)
+                    .addComponent(currXPos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(upButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xLabel)
-                    .addComponent(currXPos)
                     .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(downButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        currHoriRate.getAccessibleContext().setAccessibleName("currHoriRate");
+        currHoriRate.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
-        // TODO add your handling code here:
+        // Up button code to increase vertical rate to max (10)
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
@@ -179,11 +184,10 @@ public class NewJFrame extends javax.swing.JFrame {
         if (currRate > -10) {
             downButton.setEnabled(true);
         }
-//        jLabel1.setText("one");
     }//GEN-LAST:event_upButtonActionPerformed
 
     private void downButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downButtonActionPerformed
-        // TODO add your handling code here:
+        // Down button code to decrease vertical rate to max (-10)
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
@@ -199,7 +203,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_downButtonActionPerformed
 
     private void leftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leftButtonActionPerformed
-        // TODO add your handling code here:
+        // Left button code to decrease horizontal rate to max (-10)
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
@@ -215,7 +219,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_leftButtonActionPerformed
 
     private void rightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightButtonActionPerformed
-        // TODO add your handling code here:
+        // Right button code to increase horizontal rate to max (10)
         if (!swingTimer.isRunning()) {
             swingTimer.start();
         }
@@ -257,19 +261,6 @@ public class NewJFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        try {
-            ActionListener ticktock = new ActionListener() {
-                public void actionPerformed(ActionEvent evnt) {
-                    System.out.println("Swing timer started"); //display of this message is basically an action which is associated with swing timer until timer stops
-                }
-            };
-            Timer timer = new Timer(555, ticktock); //timer is ticking
-            timer.setRepeats(false); //by using this, we are asking to off timer once
-            timer.start();
-            Thread.sleep(5555);
-            System.out.println("Timeout"); //timer ends and this message is displayed
-        } catch (InterruptedException expn) {
-        }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -297,9 +288,14 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel yLabel;
     // End of variables declaration//GEN-END:variables
     
+    // Timer running on 1 second to update current axis position based on horizontal
+    // and vertical rates
     private javax.swing.Timer swingTimer = new Timer(1000, new ActionListener() {
+        // Timer is started on main thread but ActionEvent is handled in separate thread
         @Override
         public void actionPerformed(ActionEvent e) {
+            // Simple calculations to add rate to current position
+            // TODO: Check against min or max values
             currYPos.setText(String.valueOf(Integer.parseInt(currYPos.getText()) + Integer.parseInt(currVertRate.getText())));
             currXPos.setText(String.valueOf(Integer.parseInt(currXPos.getText()) + Integer.parseInt(currHoriRate.getText())));
         }
