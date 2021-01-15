@@ -8,7 +8,10 @@ package com.mycompany.mavenproject1;
 /**
  *
  * @author kshintaku
+ * Work on creating MVC
  */
+
+// This should probably be an interface instead of a class
 public class Telescope {
     Axis xaxis = new Axis();
     Axis yaxis = new Axis();
@@ -30,7 +33,7 @@ public class Telescope {
     }
 }
 
-
+// Breaking objects down more to reduce repetitive code
 public class Axis {
      public int getPos() {
         return currentPos;
